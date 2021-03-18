@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见的CSS文字居中显示</title>
+    <meta name="keywords" content="css,前端,公众号,常见的CSS文字居中显示" />
+    <meta name="description" content="故事胶片,前端分享,公众号：小夭同学,常见的CSS文字居中显示" />
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="viewport" content="width=750,minimum-scale=0.2,maximum-scale=2,user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+    <link rel="stylesheet" href="https://web.lieme.cn/common/css/base.css">
+    <link rel="stylesheet" href="css/cssCenter.css">
+</head>
+<body>
+   <div class="index clearfix">
+      <div class="info">
+         <img src="http://blogimg.lieme.cn/FsaWonzTLc3IJVZgYDrjHdVEj3HR"  class="img mb50" alt="">
+         <div class="box">
+            <a href="https://toc.lieme.cn">前端博客：故事胶片</a>
+            <a href="https://mp.weixin.qq.com/s/9gVMEr5H6PlU5BAvbtREzA">用故事与酒分享前端的乐趣-公众号小夭同学</a>
+            <a href="https://github.com/jiaopianjun/JsCode/blob/master/%E5%B8%B8%E8%A7%81%E7%9A%84CSS%E6%96%87%E5%AD%97%E5%B1%85%E4%B8%AD%E6%98%BE%E7%A4%BA.md">Github-卖坚果的怪叔叔</a>
+            <a href="https://web.lieme.cn/cssDemo/cssdemo.html">前端常用的CSS代码</a>
+         </div>
+      </div>
+      <div class="title">常见的CSS文字居中显示</div>
+      <div class="list">
+         <h3>1、利用line-height和vertical-align实现</h3>
+         <div class="cont class">
+            <div class="item mt50 center">
+               利用line-height和vertical-align实现
+            </div>
+            <pre>
+               .center {
+                  vertical-align: middle;
+                  line-height: 200px;
+                  text-align: center;
+               }
+            </pre>
+         </div>
+      </div>
+      <div class="list">
+         <h3>2、利用display:table-cell实现水平垂直居中显示</h3>
+         <div class="cont class">
+            <div class="item mt50 table">
+               <span class="cell">利用display:table-cell实现水平垂直居中显示</span>
+            </div>
+            <pre>
+               .table{
+                  display: table;
+               }
+               .cell{
+                  display: table-cell;
+                  vertical-align: middle;
+                  text-align: center;
+               }
+            </pre>
+         </div>
+      </div>
+      <div class="list">
+         <h3>3、利用定位方式position+transform实现水平垂直居中显示</h3>
+         <div class="cont class">
+            <div class="item mt50 relative">
+               <span class="absolute vc">
+                  利用定位方式position+transform实现水平垂直居中显示
+               </span>
+            </div>
+            <pre>
+               .vc {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+               }
+            </pre>
+         </div>
+      </div>
+      <div class="list">
+         <h3>4、利用display：flex</h3>
+         <div class="cont class">
+            <div class="item mt50 flex">
+               利用display：flex
+            </div>
+            <pre>
+               .flex{
+                  display:flex;
+                  flex-direction: row; 
+                  justify-content: space-around;
+                  align-items: center;
+               }
+            </pre>
+         </div>
+      </div>
+      <div class="list">
+         <h3>5、利用display：box</h3>
+         <div class="cont class">
+            <div class="item mt50 box">
+               利用display：box
+            </div>
+            <pre>
+               .box {
+                  display: -webkit-box;
+                  -webkit-box-orient: horizontal;
+                  -webkit-box-pack: center;
+                  -webkit-box-align: center;
+               }
+            </pre>
+         </div>
+      </div>
+   </div>
+   <div class="foot"><span id="busuanzi_container_site_pv" class="pv">已有<span id="busuanzi_value_site_pv"></span>人光临！！</span></div>
+</body>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</html>

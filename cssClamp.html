@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>文字省略号demo</title>
+   <meta name="keywords" content="css,前端,公众号,前端常用CSS代码Demo" />
+   <meta name="description" content="故事胶片,前端分享,公众号：执行上下文,前端常用CSS代码Demo" />
+   <meta content="telephone=no" name="format-detection">
+   <meta content="black" name="apple-mobile-web-app-status-bar-style">
+   <meta name="viewport" content="width=750,minimum-scale=0.2,maximum-scale=2,user-scalable=no" />
+   <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+   <link rel="stylesheet" href="https://web.lieme.cn/common/css/base.css">
+   <link rel="stylesheet" href="css/cssdemo.css">
+</head>
+
+<body>
+   <div class="index clearfix">
+      <!-- <div class="info">
+         <img src="http://blogimg.lieme.cn/FsaWonzTLc3IJVZgYDrjHdVEj3HR"  class="img mb50" alt="">
+         <div class="box">
+            <a href="https://toc.lieme.cn">前端博客：故事胶片</a>
+            <a href="https://mp.weixin.qq.com/s/9gVMEr5H6PlU5BAvbtREzA">用故事与酒分享前端的乐趣-公众号小夭同学</a>
+            <a href="https://github.com/jiaopianjun/JsCode/blob/master/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84CSS%E4%BB%A3%E7%A0%81%E5%9D%97.md">Github-卖坚果的怪叔叔</a>
+            <a href="https://web.lieme.cn/cssDemo/cssCenter.html">常见的CSS文字居中显示</a>
+         </div>
+      </div> -->
+      <div class="title">前端常用的CSS代码</div>
+      <div class="list">
+         <h3>1、限制单行文本超出显示省略号</h3>
+         <div class="cont class">
+            <div class="item mt50">
+               <div class="textEllipsis">限制单行文本超出显示省略号限制单行文本超出显示省略号限制单行文本超出显示省略号限制单行文本超出显示省略号限制单行文本超出显示省略号</div>
+            </div>
+            <pre>
+               .textEllipsis{
+                  width: 165px;
+                  height: 30px;
+                  line-height: 30px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  font-size: 14px;
+               }
+            </pre>
+         </div>
+      </div>
+      <div class="list">
+         <h3>2、限制多行文本超出省略号</h3>
+         <div class="cont class">
+            <div class="item mt50">
+               <div class="moreText">限制多行文本超出省略号限制多行文本超出省略号限制多行文本超出省略号限制多行文本超出省略号限制多行文本超出省略号</div>
+            </div>
+            <pre>
+               .moreText{
+                  overflow : hidden;
+                  text-overflow: ellipsis;
+                  white-space: normal;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+               }
+            </pre>
+         </div>
+      </div>
+      <div class="list">
+         <h3>3、限制块文本省略(1)</h3>
+         <div class="cont class">
+            <div class="item mt50">
+               <div class="quteDiv">
+                  <div class="blockQute">
+                     <div class="block">前端</div>
+                     <div class="block">苏州是江苏的</div>
+                     <div class="block">江苏是中国的也是世界的</div>
+                  </div>
+               </div>
+               <div class="quteDiv">
+                  <div class="blockQute blockExc">
+                     <div class="block">前端</div>
+                     <div class="block">苏州是江苏的</div>
+                     <div class="block">江苏是中国的也是世界的</div>
+                  </div>
+               </div>
+            </div>
+            <pre>
+                  .blockExc {
+                     width: 330px;
+                     padding: 5px 0;
+                     white-space: nowrap;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                  }
+                  
+                  .blockQute .block {
+                     display: inline;
+                     border-radius: 4px;
+                     background: #1c8a95;
+                     color: #Fff;
+                     padding: 4px 10px;
+                     font-size: 15px;
+                  }
+            </pre>
+         </div>
+      </div>
+      <div class="list">
+         <h3>4、限制块文本省略(2)</h3>
+         <div class="cont class">
+            <div class="item mt50">
+               <div class="quteDiv">
+                  <div class="blockQute">
+                     <div class="block">前端</div>
+                     <div class="block">苏州是江苏的</div>
+                     <div class="block">江苏是中国的也是世界的</div>
+                  </div>
+               </div>
+               <div class="quteDiv">
+                  <div class="blockQute blockExc blockFxc">
+                     <div class="block">前端</div>
+                     <div class="block">苏州是江苏的</div>
+                     <div class="block">江苏是中国的也是世界的</div>
+                  </div>
+               </div>
+            </div>
+            <pre>
+                  .blockExc {
+                     width: 330px;
+                     padding: 5px 0;
+                     white-space: nowrap;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                  }
+                  .blockFxc .block {
+                     display: inline-block;
+                     border-radius: 4px;
+                     background: #1c8a95;
+                     color: #Fff;
+                     padding: 4px 10px;
+                     font-size: 15px;
+                  }
+            </pre>
+         </div>
+      </div>
+      <div class="list">
+            <h3>4、限制块文本省略(IOS兼容)</h3>
+            <div class="cont class">
+               <div class="item mt50">
+                  <div class="quteDiv">
+                     <div class="blockQute">
+                        <div class="block">前端</div>
+                        <div class="block">苏州是江苏的</div>
+                        <div class="block">江苏是中国的也是世界的</div>
+                     </div>
+                  </div>
+                  <div class="quteDiv">
+                     <div class="blockQute blockIos">
+                        <div class="block">前端</div>
+                        <div class="block">苏州是江苏的</div>
+                        <div class="block">江苏是中国的也是世界的</div>
+                     </div>
+                  </div>
+               </div>
+               <pre>
+                     .blockIos {
+                        width: 200px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: normal;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                     }
+                     .blockIos  .block {
+                        display: inline-block;
+                     }
+               </pre>
+            </div>
+         </div>
+      <div class="list">
+         <h3>5、用CSS动画实现省略号动画</h3>
+         <div class="cont class">
+            <div class="item mt50">
+               <div class="point">
+                  用CSS动画实现省略号动画
+               </div>
+            </div>
+            <pre>
+               .point:after {
+                  overflow: hidden;
+                  display: inline-block;
+                  vertical-align: bottom;
+                  animation: ellipsis 2s infinite;
+                  content: "\2026";
+               }
+               @keyframes ellipsis {
+                  from {
+                        width: 2px;
+                  }
+                  to {
+                        width: 15px;
+                  }
+               }
+            </pre>
+         </div>
+      </div>
+      <div class="list">
+         <h3>6、CSS3方格图案</h3>
+         <div class="cont class">
+            <div class="item mt50">
+               <div class="fg"></div>
+            </div>
+            <pre>
+               .fg {
+                  background-color: white;
+                  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
+                  linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+                  background-size: 100px 100px;
+                  background-position: 0 0, 50px 50px;
+               }
+            </pre>
+         </div>
+      </div>
+      <div class="list">
+         <h3>7、CSS3圆点图案</h3>
+         <div class="cont class">
+            <div class="item mt50">
+               <div class="round"></div>
+            </div>
+            <pre>
+               .round {
+                  background: radial-gradient(circle, white 10%, transparent 10%),
+                  radial-gradient(circle, white 10%, black 10%) 50px 50px;
+                  background-size: 100px 100px;
+               }
+            </pre>
+         </div>
+      </div>
+
+
+      <div class="list">
+         <h3>8、CSS实现网格背景</h3>
+         <div class="cont class">
+            <div class="item mt50">
+               <div class="grid"></div>
+            </div>
+            <pre>
+               .grid{
+                  background:#ccc;
+                  background-image: linear-gradient(white 0px,transparent 0),
+                  linear-gradient(90deg, white 0px,transparent 0),
+                  linear-gradient(hsla(0,0%,100%,.3) 1px,transparent 0),
+                  linear-gradient(90deg,hsla(0,0%,100%,.3) 1px,transparent 0);
+                  background-size:75px 75px,75px 75px,15px 15px,15px 15px;
+               }
+            </pre>
+         </div>
+      </div>
+   </div>
+   <div class="foot"><span id="busuanzi_container_site_pv" class="pv">已有<span
+            id="busuanzi_value_site_pv"></span>人光临！！</span></div>
+</body>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</html>
